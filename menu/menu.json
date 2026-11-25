@@ -1,0 +1,163 @@
+{
+  "phone": "346-355-8226",
+  "note_es": "Todos los tacos se sirven en tortilla de harina o maíz. Frijoles y/o queso disponibles a petición.",
+  "note_en": "All tacos served with your choice of flour or corn tortilla. Add beans and/or cheese upon request.",
+  "categories": [
+    {
+      "id": "breakfast",
+      "name_es": "Tacos de desayuno",
+      "name_en": "Breakfast tacos",
+      "items": [
+        {
+          "es": "Huevo con Papa",
+          "en": "Egg & Potato",
+          "price": 3.25,
+          "img": "huevo-papa.jpg"
+        },
+        {
+          "es": "Huevo con Chorizo",
+          "en": "Egg & Chorizo",
+          "price": 3.25,
+          "img": "huevo-chorizo.jpg"
+        },
+        {
+          "es": "Huevo con Tocino",
+          "en": "Egg & Bacon",
+          "price": 3.25,
+          "img": "huevo-tocino.jpg"
+        },
+        {
+          "es": "Huevo con Jamón",
+          "en": "Egg & Ham",
+          "price": 3.25,
+          "img": "huevo-jamon.jpg"
+        },
+        {
+          "es": "Huevo a la Mexicana",
+          "en": "Mexican-style egg (tomato, onion, jalapeño)",
+          "price": 3.25,
+          "img": "huevo-mexicana.jpg",
+          "featured": true
+        },
+        {
+          "es": "Rajas con Queso",
+          "en": "Roasted poblano pepper strips with cheese",
+          "price": 3.25,
+          "img": "rajas-queso.jpg",
+          "featured": true
+        },
+        {
+          "es": "Papas con Chorizo",
+          "en": "Potato & Chorizo",
+          "price": 3.25,
+          "img": "papas-chorizo.jpg"
+        }
+      ]
+    },
+    {
+      "id": "specialty",
+      "name_es": "Tacos especiales",
+      "name_en": "Specialty tacos",
+      "items": [
+        {
+          "es": "Picadillo",
+          "en": "Ground beef with potato, carrot, onion & bell pepper",
+          "price": 4.0,
+          "img": "picadillo.jpg"
+        },
+        {
+          "es": "Puerco con Nopales en Salsa Pasilla",
+          "en": "Pork & nopales in pasilla pepper salsa",
+          "price": 4.0,
+          "img": "puerco-nopales.jpg"
+        },
+        {
+          "es": "Tinga de Pollo",
+          "en": "Shredded chicken in chipotle sauce",
+          "price": 4.0,
+          "img": "tinga.jpg"
+        },
+        {
+          "es": "Adobo de Puerco",
+          "en": "Pork in adobo sauce",
+          "price": 4.0,
+          "img": "adobo.jpg"
+        },
+        {
+          "es": "Chicharrón en Salsa Verde",
+          "en": "Fried pork skin in tomatillo salsa",
+          "price": 4.0,
+          "img": "chicharron-verde.jpg"
+        },
+        {
+          "es": "Barbacoa",
+          "en": "Slow-cooked beef",
+          "price": 4.0,
+          "img": "barbacoa.jpg",
+          "featured": true
+        },
+        {
+          "es": "Carnitas",
+          "en": "Braised pork",
+          "price": 4.0,
+          "img": "carnitas.jpg"
+        },
+        {
+          "es": "Carne de Res a la Mexicana",
+          "en": "Mexican-style beef (tomato, onion, jalapeño)",
+          "price": 4.0,
+          "img": "res-mexicana.jpg"
+        }
+      ]
+    },
+    {
+      "id": "drinks",
+      "name_es": "Bebidas",
+      "name_en": "Drinks",
+      "items": [
+        {
+          "es": "Café",
+          "en": "Coffee",
+          "price": 2.25
+        },
+        {
+          "es": "Café de Olla",
+          "en": "Traditional Mexican spiced coffee",
+          "price": 3.5
+        },
+        {
+          "es": "Soda de Bote",
+          "en": "Canned soda",
+          "price": 3.0
+        },
+        {
+          "es": "Jugo de Naranja Natural",
+          "en": "Fresh orange juice",
+          "price": 5.5
+        },
+        {
+          "es": "Coca Mexicana",
+          "en": "Mexican Coke",
+          "price": 4.25,
+          "img": "coca-mexicana.jpg"
+        },
+        {
+          "es": "Botella de Agua",
+          "en": "Bottled water",
+          "price": 1.65
+        },
+        {
+          "es": "Jarritos",
+          "en": "Mexican soda",
+          "price": 3.5
+        },
+        {
+          "es": "Aguas Frescas",
+          "en": "Fresh fruit water",
+          "price": 4.25,
+          "img": "agua-fresca.jpg"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Taco Shop on First St · Humble, TX</title>
+<meta name="description" content="Handmade tortillas every morning on First St, Humble TX. Open 6 AM – 2 PM. New website coming December 24.">
+<meta property="og:title" content="The Taco Shop on First St · Humble, TX">
+<meta property="og:description" content="Handmade tortillas. Con todo. 1007 First St E, Humble TX · Open 6 AM – 2 PM.">
+<meta property="og:image" content="img/plato.jpg">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231A1A1A'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='34' font-weight='900' fill='%23F7801F' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
+<style>
+  @font-face{font-family:Ultra;src:url(fonts/ultra-latin-400-normal.woff2) format('woff2');font-display:swap}
+  @font-face{font-family:Montserrat;src:url(fonts/montserrat-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
+  @font-face{font-family:Montserrat;src:url(fonts/montserrat-latin-600-normal.woff2) format('woff2');font-weight:600;font-display:swap}
+  @font-face{font-family:Montserrat;src:url(fonts/montserrat-latin-700-normal.woff2) format('woff2');font-weight:700;font-display:swap}
+  @font-face{font-family:Montserrat;src:url(fonts/montserrat-latin-800-normal.woff2) format('woff2');font-weight:800;font-display:swap}
+
+  :root{--ink:#1A1A1A;--muted:#555049;--orange:#F7801F;--orange-dk:#D9600B;--line:#ECE7E1;--soft:#FBF8F5}
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fff;color:var(--ink);font-family:Montserrat,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  .title{font-family:Ultra,Georgia,serif;font-weight:400;letter-spacing:-.005em;line-height:1.02;margin:0}
+  .kicker{display:block;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--orange-dk);margin-bottom:14px}
+  .lead{font-size:18px;line-height:1.65;font-weight:500;color:var(--muted);margin:0}
+  .btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;border-radius:999px;padding:16px 28px;font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;transition:transform .15s ease,background .15s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-orange{background:var(--orange);color:var(--ink)}
+  .btn-line{border:2px solid var(--ink);padding:14px 26px}
+  .photo{border-radius:28px;overflow:hidden;background:var(--soft)}
+  .photo img{width:100%;height:100%;object-fit:cover}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:16px;padding-bottom:16px}
+  header .logo img{height:44px;width:auto}
+  header nav{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+  header nav a.link{text-decoration:none}
+  header nav a.link:hover{color:var(--orange-dk)}
+  header .btn{padding:12px 22px;font-size:13px}
+
+  /* Hero */
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;padding-top:72px;padding-bottom:96px}
+  .tag{display:inline-block;border:2px solid var(--ink);border-radius:999px;padding:7px 16px;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:26px}
+  .hero h1{font-size:clamp(46px,6.4vw,88px)}
+  .hero h1 span{color:var(--orange)}
+  .hero .lead{margin:26px 0 34px;max-width:31em}
+  .btns{display:flex;gap:12px;flex-wrap:wrap}
+  .meta{margin-top:26px;font-size:14px;font-weight:600;color:var(--muted)}
+  .meta b{color:var(--ink)}
+  .hero-photo{position:relative}
+  .hero-photo .photo{aspect-ratio:4/5}
+  .sticker{position:absolute;left:-28px;bottom:42px;background:var(--orange);color:var(--ink);border:6px solid #fff;border-radius:22px;padding:16px 22px;transform:rotate(-7deg);box-shadow:0 14px 30px rgba(0,0,0,.18);animation:slap .7s cubic-bezier(.2,1.6,.4,1) .4s both;text-align:center}
+  .sticker small{display:block;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+  .sticker strong{display:block;font-family:Ultra,Georgia,serif;font-weight:400;font-size:30px;line-height:1.05}
+  @keyframes slap{0%{transform:scale(2.2) rotate(8deg);opacity:0}100%{transform:scale(1) rotate(-7deg);opacity:1}}
+
+  /* Feature rows */
+  section.row .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;padding-top:96px;padding-bottom:96px}
+  section.row h2{font-size:clamp(38px,4.8vw,64px);margin-bottom:22px}
+  section.row .photo{aspect-ratio:4/5}
+  .soft{background:var(--soft)}
+  .note{margin-top:28px;border:2px dashed #CFC6BC;border-radius:16px;padding:18px 20px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8A8178}
+
+  /* Coming next placeholders */
+  .next .wrap{padding-top:96px;padding-bottom:96px}
+  .next-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+  .next h2{font-size:clamp(36px,4.4vw,58px)}
+  .grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+  .slot{border:2px dashed #CFC6BC;border-radius:22px;aspect-ratio:3/4;padding:22px;display:flex;flex-direction:column;justify-content:space-between}
+  .slot .n{font-size:14px;font-weight:800;color:var(--orange-dk)}
+  .slot .t{font-size:20px;font-weight:800;text-transform:uppercase;letter-spacing:.02em}
+  .slot .s{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A8178}
+
+
+  /* Menu catalog */
+  .menu .wrap,.order .wrap{padding-top:96px;padding-bottom:96px}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+  .sec-head h2{font-size:clamp(36px,4.6vw,60px)}
+  .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+  .item{border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;background:#fff}
+  .item .pic{aspect-ratio:3/4;background:var(--soft);display:flex;align-items:center;justify-content:center;color:#8A8178;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+  .item .pic img{width:100%;height:100%;object-fit:cover}
+  .item .body{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .item .top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+  .item h3{margin:0;font-size:19px;font-weight:800;text-transform:uppercase;letter-spacing:.02em}
+  .item .price{font-weight:800;color:var(--orange-dk);white-space:nowrap}
+  .item p{margin:0;font-size:14px;line-height:1.55;color:var(--muted)}
+  .item .acts{display:flex;gap:8px;margin-top:auto;padding-top:12px}
+  .item .acts a{flex:1;justify-content:center;padding:12px 10px;font-size:12px}
+  .video video{width:100%;height:100%;object-fit:cover;display:block}
+  #tortillas .photo{aspect-ratio:4/5}
+
+  /* Order + reviews */
+  .order .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+  .order-card{display:flex;flex-direction:column;gap:14px;text-decoration:none;border-radius:28px;padding:44px;min-height:260px;background:radial-gradient(ellipse at 30% 30%,#FCD68C 0%,#FBB45A 45%,#F7801F 100%);transition:transform .15s ease}
+  .order-card:hover{transform:translateY(-4px)}
+  .order-card.dark{background:var(--ink);color:#fff}
+  .order-card.dark .kicker{color:var(--orange)}
+  .order-card .kicker{color:var(--ink)}
+  .order-card .title{font-size:clamp(30px,3.4vw,44px)}
+  .order-card .go{margin-top:auto;font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+
+  /* Visit */
+  .visit{background:radial-gradient(ellipse at 50% 45%,#FCD68C 0%,#FBB45A 40%,#F7801F 85%,#F26F18 100%)}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;padding-top:96px;padding-bottom:96px}
+  .visit .kicker{color:var(--ink)}
+  .visit h2{font-size:clamp(38px,4.8vw,64px);margin-bottom:22px}
+  .visit .lead{color:var(--ink)}
+  .facts{display:grid;gap:6px;margin:26px 0 32px;font-size:20px;font-weight:800}
+  .visit a.photo{display:block;aspect-ratio:4/5;box-shadow:0 24px 50px rgba(0,0,0,.18);transition:transform .2s ease}
+  .visit a.photo:hover{transform:translateY(-4px) rotate(-1deg)}
+
+  /* Footer */
+  footer{border-top:1px solid var(--line)}
+  footer .wrap{display:flex;flex-direction:column;align-items:center;gap:28px;padding-top:72px;padding-bottom:40px;text-align:center}
+  footer .vlogo img{height:150px;width:auto}
+  .social{display:flex;gap:18px}
+  .social a{display:block;width:56px;height:56px;border-radius:16px;overflow:hidden;transition:transform .15s ease}
+  .social a:hover{transform:translateY(-3px)}
+  .social img{width:100%;height:100%}
+  footer small{font-size:13px;color:var(--muted);font-weight:500}
+
+  @media (max-width:900px){
+    header nav a.link{display:none}
+    header .logo img{height:34px}
+    .hero .wrap,section.row .wrap,.visit .wrap{grid-template-columns:1fr;gap:40px;padding-top:48px;padding-bottom:64px}
+    section.row.flip .text{order:-1}
+    .sticker{left:12px;bottom:18px}
+    .cards{grid-template-columns:1fr}
+    .order .wrap{grid-template-columns:1fr}
+    .order-card{padding:32px;min-height:200px}
+  }
+  @media (prefers-reduced-motion:reduce){.sticker{animation:none}.btn,.social a,.visit a.photo{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="The Taco Shop on First St, home"><img src="img/logo-horizontal.png" alt="The Taco Shop on First St"></a>
+    <nav>
+      <a class="link" href="menu/">Menu</a>
+      <a class="link" href="#tortillas">Tortillas</a>
+      <a class="link" href="#story">Our story</a>
+      <a class="link" href="#visit">Visit</a>
+      <a class="btn btn-orange" href="https://share.google/w4GpSVDN8pLfUwrSD" target="_blank" rel="noopener">Directions</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="tag">Hecho a mano · Humble, TX</span>
+        <h1 class="title">Handmade tortillas. <span>Con todo.</span></h1>
+        <p class="lead">Humble is still asleep… the tortillas aren't. Real tacos on First St, made from scratch every single morning.</p>
+        <div class="btns">
+          <a class="btn btn-dark" href="https://share.google/w4GpSVDN8pLfUwrSD" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn btn-line" href="#follow">Follow us</a>
+        </div>
+        <p class="meta"><b>Open 6 AM – 2 PM</b> · 1007 First St E, Humble, TX · <a href="tel:+13463558226" target="_top" style="font-weight:800;color:var(--ink)">346-355-8226</a></p>
+      </div>
+      <div class="hero-photo">
+        <div class="photo"><img src="img/frente.jpg" alt="The Taco Shop storefront with its flower mural on First St"></div>
+        <div class="sticker" aria-label="New website coming December 24"><small>New website</small><strong>Dec 24</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="kicker">Menu</span>
+          <h2 class="title">Call. Order. Pick up.</h2>
+        </div>
+      </div>
+      <div class="cards js-menu"></div>
+      <div class="btns" style="margin-top:32px;justify-content:center"><a class="btn btn-orange" href="menu/">See full menu →</a></div>
+    </div>
+  </section>
+
+  <section class="row soft" id="plato">
+    <div class="wrap">
+      <div class="photo"><img src="img/plato.jpg" alt="Tacos with cilantro, onion and lime next to a Mexican Coke and The Taco Shop box" loading="lazy"></div>
+      <div class="text">
+        <span class="kicker">Plato insignia</span>
+        <h2 class="title">The signature plate.</h2>
+        <p class="lead">Tacos on handmade tortillas with cebolla, cilantro and limón, plus a cold Mexican Coke. The one everybody orders first.</p>
+        <div class="btns" style="margin-top:28px">
+          <a class="btn btn-dark js-call" href="tel:+13463558226" target="_top" data-item="the signature plate">Call to order</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row flip" id="tortillas">
+    <div class="wrap">
+      <div class="text">
+        <span class="kicker">Detrás de la masa</span>
+        <h2 class="title">Handmade tortillas.</h2>
+        <p class="lead">Every tortilla we serve is made by hand the same morning. Take some home: order fresh tortillas and pick them up warm.</p>
+        <div class="btns" style="margin-top:28px">
+          <a class="btn btn-orange js-call" href="tel:+13463558226" target="_top" data-item="fresh tortillas">Order tortillas</a>
+        </div>
+      </div>
+      <div class="photo video">
+        <video class="js-video" src="video/tortillas.mp4" poster="img/tortillas.jpg" muted loop playsinline autoplay preload="none" aria-label="Hands making fresh tortillas"></video>
+      </div>
+    </div>
+  </section>
+
+  <section class="order" id="order">
+    <div class="wrap">
+      <a class="order-card dark js-doordash" href="#" target="_blank" rel="noopener">
+        <span class="kicker">Order online</span>
+        <span class="title">Delivered to your door.</span>
+        <span class="go">Order on DoorDash →</span>
+      </a>
+      <a class="order-card js-review" href="#" target="_blank" rel="noopener">
+        <span class="kicker">Reviews</span>
+        <span class="title">Loved your tacos?</span>
+        <span class="go">Leave us a Google review →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="row soft" id="story">
+    <div class="wrap">
+      <div class="photo"><img src="img/frente.jpg" alt="The Taco Shop storefront on First St" loading="lazy"></div>
+      <div class="text">
+        <span class="kicker">Our story</span>
+        <h2 class="title">Born on First St.</h2>
+        <p class="lead">The Taco Shop opened on March 30, 2026, just two doors down from Letty's Authentic Mexican Cocina. It's the newest kitchen from Letty Martinez, the owner behind Letty's and Yummy Tummy Pastries. The idea was simple: real Mexican breakfast, starting with tortillas made by hand every morning.</p>
+        <div class="note">Espacio: la historia en palabras de Letty · foto de la familia</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <div>
+        <span class="kicker">Visit us</span>
+        <h2 class="title">Come hungry.</h2>
+        <p class="lead">Look for the flower mural on First St. We'll have the comal ready.</p>
+        <div class="facts">
+          <span>1007 First St E, Humble, TX</span>
+          <span>Open 6 AM – 2 PM</span>
+          <a href="tel:+13463558226" target="_top" style="text-decoration:none">346-355-8226</a>
+        </div>
+        <a class="btn btn-dark" href="https://share.google/w4GpSVDN8pLfUwrSD" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+      <a class="photo" href="https://share.google/w4GpSVDN8pLfUwrSD" target="_blank" rel="noopener" aria-label="Open The Taco Shop on Google Maps"><img src="img/visit-google.jpg" alt="The Taco Shop on Google Maps, rated 4.5 stars" loading="lazy"></a>
+    </div>
+  </section>
+
+</main>
+
+<footer id="follow">
+  <div class="wrap">
+    <a class="vlogo" href="#top" aria-label="Back to top"><img src="img/logo-vertical.png" alt="The Taco Shop on First St"></a>
+    <div class="social">
+      <a href="https://www.instagram.com/thetacoshoponfirstst" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/instagram.png" alt=""></a>
+      <a href="https://www.tiktok.com/@thetacoshop1st" target="_blank" rel="noopener" aria-label="TikTok"><img src="img/tiktok.png" alt=""></a>
+      <a href="https://www.facebook.com/p/The-Taco-Shop-On-First-St-61583793178223/" target="_blank" rel="noopener" aria-label="Facebook"><img src="img/facebook.png" alt=""></a>
+    </div>
+    <small>© 2026 The Taco Shop on First St · 1007 First St E, Humble, TX</small>
+  </div>
+</footer>
+
+
+<script>
+/* ===================== CONFIGURACIÓN =====================
+   Precios y productos NO van aquí: viven en menu/menu.json (un solo lugar). */
+const CONFIG = {
+  PHONE: "346-355-8226",
+  DOORDASH: "",       // link de la tienda en DoorDash (vacío = la tarjeta no aparece)
+  GOOGLE_REVIEW: "https://www.google.com/search?q=The+Taco+Shop+On+First+Street+Humble#lrd=0x8640b303e7b5562f:0x7e37ce842ebe9fbb,3,,,,"  // abre directo la ventana de "Escribir una opinión"
+};
+/* ========================================================= */
+
+const tel = "tel:+1" + CONFIG.PHONE.replace(/\D/g, "");
+const money = n => "$" + Number(n).toFixed(2);
+const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+document.querySelectorAll(".js-call").forEach(a => a.href = tel);
+
+const dd = document.querySelector(".js-doordash");
+if (CONFIG.DOORDASH) dd.href = CONFIG.DOORDASH; else dd.hidden = true;
+document.querySelector(".js-review").href = CONFIG.GOOGLE_REVIEW;
+
+/* Menú destacado: lee los productos marcados "featured" de menu/menu.json */
+fetch("menu/menu.json", { cache: "no-store" })
+  .then(r => r.json())
+  .then(data => {
+    const items = data.categories.flatMap(c => c.items).filter(i => i.featured).slice(0, 3);
+    document.querySelector(".js-menu").innerHTML = items.map(p =>
+      '<article class="item"><a class="pic" href="menu/" style="display:block"><img src="menu/img/' + esc(p.img) + '" alt="' + esc(p.es) + ' taco" loading="lazy"></a>' +
+      '<div class="body"><div class="top"><h3><a href="menu/" style="text-decoration:none">' + esc(p.es) + '</a></h3><span class="price">' + money(p.price) + '</span></div>' +
+      '<p>' + esc(p.en) + '</p><div class="acts"><a class="btn btn-dark" href="' + tel + '" target="_top">Call to order</a></div></div></article>'
+    ).join("");
+  })
+  .catch(() => { document.querySelector(".js-menu").innerHTML = ""; });
+
+/* Si todavía no hay video, se queda la foto */
+const v = document.querySelector(".js-video");
+v.addEventListener("error", () => { v.removeAttribute("src"); }, true);
+</script>
+</body>
+</html>

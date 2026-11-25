@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu · The Taco Shop on First St · Humble, TX</title>
+<meta name="description" content="Breakfast tacos, specialty tacos and drinks on handmade tortillas. Call 346-355-8226 to order. 1007 First St E, Humble TX.">
+<meta property="og:title" content="Menu · The Taco Shop on First St">
+<meta property="og:image" content="img/barbacoa.jpg">
+<meta name="theme-color" content="#FFFFFF">
+<style>
+  @font-face{font-family:Ultra;src:url(../fonts/ultra-latin-400-normal.woff2) format('woff2');font-display:swap}
+  @font-face{font-family:Montserrat;src:url(../fonts/montserrat-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
+  @font-face{font-family:Montserrat;src:url(../fonts/montserrat-latin-700-normal.woff2) format('woff2');font-weight:700;font-display:swap}
+  @font-face{font-family:Montserrat;src:url(../fonts/montserrat-latin-800-normal.woff2) format('woff2');font-weight:800;font-display:swap}
+  :root{--ink:#1A1A1A;--muted:#555049;--orange:#F7801F;--orange-dk:#C55508;--line:#ECE7E1;--soft:#FBF8F5}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fff;color:var(--ink);font-family:Montserrat,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  .title{font-family:Ultra,Georgia,serif;font-weight:400;line-height:1.02;margin:0}
+  .kicker{display:block;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--orange-dk);margin-bottom:12px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border-radius:999px;padding:14px 24px;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;transition:transform .15s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-orange{background:var(--orange);color:var(--ink)}
+
+  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:14px;padding-bottom:14px}
+  header .logo img{height:42px;width:auto}
+  .tabs{border-top:1px solid var(--line)}
+  .tabs .wrap{display:flex;justify-content:flex-start;gap:8px;padding-top:10px;padding-bottom:10px;overflow-x:auto}
+  .tabs a{flex:none;color:var(--ink);text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border:2px solid var(--line);border-radius:999px;padding:9px 16px}
+  .tabs a:hover{border-color:var(--ink)}
+
+  .intro .wrap{padding-top:56px;padding-bottom:24px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+  .intro h1{font-size:clamp(46px,6vw,84px)}
+  .intro p{margin:14px 0 0;font-size:16px;line-height:1.6;font-weight:500;color:var(--muted);max-width:34em}
+
+  section.cat .wrap{padding-top:48px;padding-bottom:40px}
+  section.cat h2{font-size:clamp(30px,3.6vw,46px)}
+  section.cat .en{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+  .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:28px}
+  .item{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff}
+  .item .pic{aspect-ratio:3/4;background:var(--soft)}
+  .item .pic img{width:100%;height:100%;object-fit:cover}
+  .item .body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .item .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+  .item h3{margin:0;font-size:16px;font-weight:800;line-height:1.25}
+  .item .price{font-weight:800;color:var(--orange-dk);white-space:nowrap}
+  .item p{margin:0;font-size:13px;line-height:1.45;color:var(--muted);font-weight:500}
+  .item .btn{margin-top:auto;padding:12px 14px;font-size:12px}
+  .item .body .spacer{flex:1;min-height:6px}
+  .list{margin-top:24px;border-top:1px solid var(--line)}
+  .row{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+  .row h3{margin:0;font-size:16px;font-weight:800}
+  .row p{margin:3px 0 0;font-size:13px;color:var(--muted);font-weight:500}
+  .row .price{font-weight:800;color:var(--orange-dk)}
+  .drinks-wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+  .drink-pics{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+  .drink-pics img{border-radius:20px;aspect-ratio:3/4;object-fit:cover;width:100%}
+
+  .note{margin:8px 0 0;padding:20px 22px;border-radius:18px;background:var(--soft);font-size:14px;line-height:1.6;font-weight:500}
+  .note b{display:block;font-weight:800}
+
+  .callbar{position:sticky;bottom:0;z-index:9;background:var(--ink);color:#fff}
+  .callbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+  .callbar span{font-size:14px;font-weight:700}
+
+  footer .wrap{display:flex;flex-direction:column;align-items:center;gap:14px;padding-top:48px;padding-bottom:48px;text-align:center;font-size:13px;color:var(--muted)}
+  footer img{height:110px;width:auto}
+  footer a{color:var(--ink);font-weight:700}
+
+  @media (max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  @media (max-width:760px){
+    .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .item .body{padding:12px}
+    .item h3{font-size:14px}
+    .drinks-wrap{grid-template-columns:1fr}
+    header .logo img{height:32px}
+    .callbar span{font-size:13px}
+  }
+  @media (prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="../" aria-label="Back to The Taco Shop home"><img src="../img/logo-horizontal.png" alt="The Taco Shop on First St"></a>
+    <a class="btn btn-orange js-call" href="tel:+13463558226" target="_top">Call to order</a>
+  </div>
+  <nav class="tabs" aria-label="Menu sections"><div class="wrap js-tabs"></div></nav>
+</header>
+
+<main>
+  <section class="intro">
+    <div class="wrap">
+      <div>
+        <span class="kicker">The Taco Shop on First St</span>
+        <h1 class="title">Menu.</h1>
+        <p>Every taco on a tortilla made by hand that morning. Pick what you want and give us a call. We'll have it ready.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="js-menu"></div>
+
+  <section class="cat">
+    <div class="wrap">
+      <p class="note js-note"></p>
+    </div>
+  </section>
+</main>
+
+<div class="callbar">
+  <div class="wrap">
+    <span>Open 6 AM – 2 PM · 1007 First St E, Humble</span>
+    <a class="btn btn-orange js-call" href="tel:+13463558226" target="_top">Call <span class="js-phone">346-355-8226</span></a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <img src="../img/logo-vertical.png" alt="The Taco Shop on First St">
+    <span>© 2026 The Taco Shop on First St · <a href="../">Back to home</a></span>
+  </div>
+</footer>
+
+<script>
+/* El menú se lee de menu.json (misma carpeta). Para cambiar precios o productos, edita SOLO ese archivo. */
+const money = n => "$" + Number(n).toFixed(2);
+const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+fetch("menu.json", { cache: "no-store" })
+  .then(r => r.json())
+  .then(data => {
+    const tel = "tel:+1" + data.phone.replace(/\D/g, "");
+    document.querySelectorAll(".js-call").forEach(a => a.href = tel);
+    document.querySelector(".js-phone").textContent = data.phone;
+    document.querySelector(".js-note").innerHTML = "<b>" + esc(data.note_en) + "</b>" + esc(data.note_es);
+
+    const tabs = document.querySelector(".js-tabs");
+    const root = document.querySelector(".js-menu");
+    let html = "";
+    data.categories.forEach(cat => {
+      tabs.insertAdjacentHTML("beforeend", '<a href="#' + esc(cat.id) + '">' + esc(cat.name_en) + '</a>');
+      html += '<section class="cat" id="' + esc(cat.id) + '"><div class="wrap">' +
+              '<h2 class="title">' + esc(cat.name_es) + '</h2><div class="en">' + esc(cat.name_en) + '</div>';
+      if (cat.id === "drinks") {
+        const pics = cat.items.filter(i => i.img);
+        html += '<div class="drinks-wrap"><div class="list">' + cat.items.map(i =>
+          '<div class="row"><div><h3>' + esc(i.es) + '</h3><p>' + esc(i.en) + '</p></div><span class="price">' + money(i.price) + '</span></div>'
+        ).join("") + '</div><div class="drink-pics">' + pics.map(i =>
+          '<img src="img/' + esc(i.img) + '" alt="' + esc(i.en) + '" loading="lazy">').join("") + '</div></div>';
+      } else {
+        html += '<div class="grid">' + cat.items.map(i =>
+          '<article class="item"><div class="pic">' + (i.img ? '<img src="img/' + esc(i.img) + '" alt="' + esc(i.es) + ' taco" loading="lazy">' : '') + '</div>' +
+          '<div class="body"><div class="top"><h3>' + esc(i.es) + '</h3><span class="price">' + money(i.price) + '</span></div>' +
+          '<p>' + esc(i.en) + '</p><div class="spacer"></div>' +
+          '<a class="btn btn-dark" href="' + tel + '" target="_top" aria-label="Call to order ' + esc(i.es) + '">Call to order</a></div></article>'
+        ).join("") + '</div>';
+      }
+      html += '</div></section>';
+    });
+    root.innerHTML = html;
+  })
+  .catch(() => {
+    document.querySelector(".js-menu").innerHTML =
+      '<section class="cat"><div class="wrap"><p class="note">Menu could not load. Call us at 346-355-8226.</p></div></section>';
+  });
+</script>
+</body>
+</html>
